@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+
+<html lang=en>
+<head>
+    <base href="https://rawcdn.githack.com/nicholasxdavis/pipeline-private/main/deploys/deploy-1775088218654/">
+    <script>
+  document.addEventListener('click', function(e) {
+    const a = e.target.closest('a');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+    if (a.target === '_blank') return;
+    if (href.startsWith('http') && !href.includes('rawcdn.githack.com')) return;
+
+    e.preventDefault();
+    document.body.style.transition = 'opacity 0.2s';
+    document.body.style.opacity = '0.4';
+
+    fetch(a.href)
+      .then(res => {
+         if (!res.ok) throw new Error('Failed to load page: ' + res.status);
+         return res.text();
+      })
+      .then(html => {
+         document.open();
+         document.write(html);
+         document.close();
+         window.scrollTo(0, 0);
+      })
+      .catch(err => {
+         console.error('[IframeEngine]', err);
+         document.body.style.opacity = '1';
+         window.open(a.href, '_blank');
+      });
+  });
+</script>
+  <meta charset=utf-8>
+  <title>ns</title>
+</head>
+<body>
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
